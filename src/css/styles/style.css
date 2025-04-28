@@ -13173,6 +13173,7 @@ a.read_more i {
 }
 
 .nft_coll {
+  height: 100%;
   background: #ffffff;
   padding-bottom: 10px;
   border: solid 1px #dddddd;
@@ -16648,6 +16649,82 @@ img {
     left: 0;
     top: -21px;
   }
+}
+
+.card-skeleton {
+  height: 240px;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.skeleton-top {
+  height: 50%;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.skeleton-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.skeleton-bottom {
+  height: 50%;
+  width: 100%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 50%;
+  height: .5rem;
+}
+
+.skeleton-text:last-child {
+  width: 40%;
+  margin-top: 5px;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.nft_wrap {
+  height: 100%;
+}
+.nft_col {
+  height: 100%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+
 }
 
 .skeleton-box {
