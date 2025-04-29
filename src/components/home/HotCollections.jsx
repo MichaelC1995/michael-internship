@@ -64,6 +64,7 @@ const HotCollections = () => {
     }
 
     return (
+
         <section id="section-collections" className="no-bottom">
             <div className="container">
                 <div className="row">
@@ -73,6 +74,7 @@ const HotCollections = () => {
                             <div className="small-border bg-color-2"></div>
                         </div>
                     </div>
+
 
                     {isLoading ? (
                         <div className={"slider-container"}>
@@ -95,13 +97,13 @@ const HotCollections = () => {
                                     (
                                         <div key={data.id}>
                                             <div className="nft_coll">
-                                                <div className="nft_wrap m-auto">
+                                                <div className="nft_wrap">
                                                     <Link to={`/item-details/${data.id}`}>
                                                         <img src={data.nftImage} className="lazy img-fluid" alt=""/>
                                                     </Link>
                                                 </div>
                                                 <div className="nft_coll_pp">
-                                                    <Link to="/author">
+                                                    <Link to="/author/${data.id}>">
                                                         <img className="lazy pp-coll" src={data.authorImage} alt=""/>
                                                     </Link>
                                                     <i className="fa fa-check"></i>
@@ -119,7 +121,6 @@ const HotCollections = () => {
                             </Slider>
                         </div>
                     )}
-
                 </div>
             </div>
         </section>
