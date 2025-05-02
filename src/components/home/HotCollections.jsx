@@ -15,7 +15,6 @@ const HotCollections = () => {
         async function renderData() {
             try {
                 const {data} = await axios.get("https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections")
-                console.log(data)
                 setUserHTML(data)
             } catch (error) {
                 console.log("Error in function renderData", error);
@@ -23,12 +22,33 @@ const HotCollections = () => {
                 setIsLoading(false);
             }
         }
-
         renderData()
-
     }, []);
 
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "gray", borderRadius: "50%"}}
+                onClick={onClick}
+            />
+        );
+    }
+
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "gray", borderRadius: "50%"}}
+                onClick={onClick}
+            />
+        );
+    }
+
     const settings = {
+        arrows: true,
         dots: true,
         lazyLoad: true,
         infinite: true,
@@ -36,6 +56,8 @@ const HotCollections = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
@@ -98,12 +120,12 @@ const HotCollections = () => {
                                         <div key={data.id}>
                                             <div className="nft_coll">
                                                 <div className="nft_wrap">
-                                                    <Link to={`/item-details/${data.id}`}>
+                                                    <Link to={`/item-details/${data.nftId}`}>
                                                         <img src={data.nftImage} className="lazy img-fluid" alt=""/>
                                                     </Link>
                                                 </div>
                                                 <div className="nft_coll_pp">
-                                                    <Link to="/author/${data.id}>">
+                                                    <Link to={`/author/${data.authorId}`}>
                                                         <img className="lazy pp-coll" src={data.authorImage} alt=""/>
                                                     </Link>
                                                     <i className="fa fa-check"></i>
