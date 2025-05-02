@@ -11522,7 +11522,7 @@ section.no-padding {
   display: none;
 }
 
-/* new owl close */
+ new owl close
 
 .text-light .owl-theme .owl-controls .owl-page span {
   background-color: #fff;
@@ -16696,6 +16696,16 @@ img {
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+
+}
+
 .skeleton-text {
   width: 50%;
   height: .5rem;
@@ -16717,15 +16727,6 @@ img {
   height: 100%;
 }
 
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 70%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
-
-}
 
 .skeleton-box {
   display: inline-block;
