@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Timer from "../UI/Timer";
+import NewItemsSkeleton from "../UI/NewItemsSkeleton";
 
 
 const NewItems = () => {
@@ -100,56 +101,8 @@ const NewItems = () => {
 
 
                     {isLoading ? (
-                        <div className={"slider-container"}>
-                            <Slider {...settings}>
-                                <div>
-                                    <div className="nft__item" style={{height: "441px"}}>
-                                        <div className="nft__item_wrap skeleton">
-                                            <div className="nft__item_extra">
-                                            </div>
-                                            <div className="lazy nft__item_preview skeleton" alt=""/>
-                                        </div>
-                                        <div className="nft__item_info skeleton"
-                                             style={{marginTop: "10px", width: "70%"}}>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_like">
-                                                <span className={"skeleton-text"}></span>
-                                            </div>
-                                        </div>
-                                        <div className="nft__item_info skeleton"
-                                             style={{marginTop: "10px", width: "50%", position: "relative"}}>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <span className={"skeleton-text"}></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="nft__item" style={{height: "441px"}}>
-                                        <div className="nft__item_wrap skeleton">
-                                            <div className="nft__item_extra">
-                                            </div>
-                                            <div className="lazy nft__item_preview skeleton" alt=""/>
-                                        </div>
-                                        <div className="nft__item_info skeleton"
-                                             style={{marginTop: "10px", width: "70%"}}>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_like">
-                                                <span className={"skeleton-text"}></span>
-                                            </div>
-                                        </div>
-                                        <div className="nft__item_info skeleton"
-                                             style={{marginTop: "10px", width: "50%", position: "relative"}}>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <div className="nft__item_price skeleton-text"></div>
-                                            <span className={"skeleton-text"}></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Slider>
-                        </div>
+
+                        <NewItemsSkeleton/>
 
                     ) : (
                         <div className={"slider-container"}>

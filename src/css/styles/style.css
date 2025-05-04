@@ -13299,6 +13299,12 @@ a.read_more i {
   z-index: 10;
 }
 
+.author_list_pp.skeleton {
+  border-radius: 50%;
+  height: 100%;
+  padding: 25px;
+}
+
 .author_list_pp img {
   width: 100%;
   border-radius: 100% !important;
