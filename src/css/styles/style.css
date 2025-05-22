@@ -16720,6 +16720,7 @@ img {
     height: .5rem;
 }
 
+
 .skeleton-text:last-child {
     width: 40%;
     margin-top: 5px;
@@ -16787,6 +16788,69 @@ img {
     100% {
         transform: translateX(100%);
     }
+}
+
+
+.author-skeleton {
+    padding: 20px;
+}
+
+
+.skeleton-profile {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.skeleton-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin-right: 15px;
+}
+
+.skeleton-info {
+    flex: 1;
+    position: relative;
+}
+
+.skeleton-name,
+.skeleton-username,
+.skeleton-url {
+    height: 20px;
+    background: #e0e0e0;
+    margin: 5px 0px;
+}
+
+.skeleton-name {
+    width: 25%
+}
+
+.skeleton-username {
+    width: 20%;
+}
+
+.skeleton-url{
+    width: 35%;
+}
+
+.skeleton-followers {
+    height: 16px;
+    width: 25%;
+    background: #e0e0e0;
+    margin-top: 24px;
+}
+
+.skeleton-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skeleton-item {
+    background: #e0e0e0;
+    height: 100px;
+    width: calc(25% - 10px);
+    margin: 5px;
 }
 
 .nft-image {

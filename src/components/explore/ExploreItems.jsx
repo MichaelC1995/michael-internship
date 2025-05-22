@@ -4,7 +4,7 @@ import axios from "axios";
 import Timer from "../UI/Timer";
 import NewItemsSkeleton from "../UI/NewItemsSkeleton";
 
-const ExploreItems = ({data}) => {
+const ExploreItems = () => {
     const [isLoading, setLoading] = useState(true)
     const [exploreHTML, setExploreHTML] = useState([])
     const [visibleCount, setVisibleCount] = useState(8)
