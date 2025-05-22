@@ -9,6 +9,8 @@ const ItemDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Does this work?
+
   return (
     <div id="wrapper">
       <div className="no-bottom no-top" id="content">
