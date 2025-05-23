@@ -36,7 +36,10 @@ const ExploreItems = () => {
     return (
         <>
             <div>
-                <select id="filter-items" onChange={handleFilterChange} defaultValue="">
+                <select id="filter-items" onChange={handleFilterChange} defaultValue=""
+                        data-aos="fade-in"
+                        data-aos-easing="ease-in-out"
+                        data-aos-duration="800">
                     <option value="">Default</option>
                     <option value="price_low_to_high">Price, Low to High</option>
                     <option value="price_high_to_low">Price, High to Low</option>
@@ -54,6 +57,9 @@ const ExploreItems = () => {
                             key={data.id}
                             className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
                             style={{display: "block", backgroundSize: "cover"}}
+                            data-aos="fade-in"
+                            data-aos-easing="ease-in-out"
+                            data-aos-duration="800"
                         >
                             <div className="nft__item">
                                 <div className="author_list_pp">
