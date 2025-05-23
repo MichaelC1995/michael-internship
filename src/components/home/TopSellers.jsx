@@ -2,6 +2,9 @@ import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import TopSellersSkeleton from "../UI/TopSellersSkeleton";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const TopSellers = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -28,7 +31,9 @@ const TopSellers = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="text-center">
-                            <h2>Top Sellers</h2>
+                            <h2 data-aos="fade-in"
+                                data-aos-easing="ease-in-out"
+                                data-aos-duration="800">Top Sellers</h2>
                             <div className="small-border bg-color-2"></div>
                         </div>
                     </div>
@@ -40,10 +45,13 @@ const TopSellers = () => {
 
                         ) : (
 
-                            <ol className="author_list">
+                            <ol className="author_list" data-aos="fade-in"
+                                data-aos-easing="ease-in-out"
+                                data-aos-duration="800">
                                 {topSellerHTML.map((data) => (
                                     <li key={data.id}>
-                                        <div className="author_list_pp">
+                                        <div className="author_list_pp"
+                                        >
                                             <Link to={`/author/${data.authorId}`}>
                                                 <img
                                                     className="lazy pp-author"

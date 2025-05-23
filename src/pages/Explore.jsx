@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Explore = () => {
     useEffect(() => {

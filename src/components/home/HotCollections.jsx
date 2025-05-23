@@ -5,6 +5,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardSkeleton from "../UI/CardSkeleton";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const HotCollections = () => {
@@ -92,13 +95,17 @@ const HotCollections = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="text-center">
-                            <h2>Hot Collections</h2>
+                            <h2 data-aos="fade-in"
+                                data-aos-easing="ease-in-out"
+                                data-aos-duration="800"
+                                >Hot Collections</h2>
                             <div className="small-border bg-color-2"></div>
                         </div>
                     </div>
 
 
                     {isLoading ? (
+
                         <div className={"slider-container"}>
                             <Slider {...settings}>
                                 <div>
@@ -118,8 +125,10 @@ const HotCollections = () => {
                                 {userHTML.map((data) =>
                                     (
                                         <div key={data.id}>
-                                            <div className="nft_coll">
-                                                <div className="nft_wrap">
+                                            <div className="nft_coll" data-aos="fade-in"
+                                                 data-aos-easing="ease-in-out"
+                                                 data-aos-duration="800">
+                                                <div className="nft_wrap" >
                                                     <Link to={`/item-details/${data.nftId}`}>
                                                         <img src={data.nftImage} className="lazy img-fluid" alt=""/>
                                                     </Link>

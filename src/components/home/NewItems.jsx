@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Timer from "../UI/Timer";
 import NewItemsSkeleton from "../UI/NewItemsSkeleton";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const NewItems = () => {
@@ -94,7 +97,9 @@ const NewItems = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="text-center">
-                            <h2>New Items</h2>
+                            <h2 data-aos="fade-in"
+                                data-aos-easing="ease-in-out"
+                                data-aos-duration="800">New Items</h2>
                             <div className="small-border bg-color-2"></div>
                         </div>
                     </div>
@@ -109,7 +114,9 @@ const NewItems = () => {
                             <Slider {...settings}>
                                 {newItemsHTML.map((data) => (
                                     <div key={data.id}>
-                                        <div className="nft__item">
+                                        <div className="nft__item" data-aos="fade-in"
+                                             data-aos-easing="ease-in-out"
+                                             data-aos-duration="800">
                                             <div className="author_list_pp">
                                                 <Link
                                                     to={`/author/${data.authorId}`}
